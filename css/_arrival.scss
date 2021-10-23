@@ -1,0 +1,14 @@
+.arrival {
+	background-color: #f8f3f4;
+	height: 148px;
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__margin {
+		margin-bottom: 96px;
+		&-registr {
+			margin-bottom: 64px;
+		}
+	}
+}

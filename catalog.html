@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="scss/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,19 +13,79 @@
 </head>
 
 <body>
+
 	<header class="header">
-		<div class="header__wrap container">
+		<nav class="header__wrap container">
 			<div class="header__left">
-				<a class="header__logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
+				<a class="header__logo" href="/index.html"><img src="img/logo.png" alt="logo"></a>
 				<img src="img/search.svg" alt="search">
 			</div>
-
 			<div class="header__right">
-				<img class="header__item" src="img/menu.svg" alt="menu list">
+				<input type="checkbox" id="burger">
+				<label class="header__menu header__item" for="burger"><img src="img/menu.svg" alt=""></label>
+				<nav class="header__nav nav">
+					<div class="nav__wrap">
+						<label class="nav__close" for="burger"><img src="img/x.svg" alt=""></label>
+						<h2 class="nav__title">MENU</h2>
+						<h3 class="nav__heading">MAN</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Accessories</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Bags</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Denim</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">T-Shirts</a>
+							</li>
+						</ul>
+
+						<h3 class="nav__heading">WOMAN</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Accessories</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Jackets & Coats</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Polos</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">T-Shirts</a>
+							</li>
+						</ul>
+
+						<h3 class="nav__heading">KIDS</h3>
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Accessories</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Jackets & Coats</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Polos</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">T-Shirts</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Shirts</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Bags</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 				<img class="header__item" src="img/LP.svg" alt="login page">
-				<img class="header__item" src="img/shopbag.svg" alt="shopping bag">
+				<a href="card.html"><img class="header__item" src="img/shopbag.svg" alt="shopping bag"></a>
 			</div>
-		</div>
+		</nav>
 	</header>
 
 	<main>
@@ -39,14 +99,60 @@
 				</div>
 			</div>
 		</section>
+
 		<!-- todo: доделать блок -->
 		<div class="filter">
 			<div class="container">
 				<div class="filter__wrap">
-					<div class="filter__1">FILTER <img src="img/filter.svg" alt=""></div>
+					<details class="filter__details">
+						<summary class="filter__summary">FILTER<img class="filter__img" src="img/filter.svg" alt="">
+						</summary>
+
+						<details class="filter__details-second">
+							<summary class="filter__summary-second">CATEGORY</summary>
+							<p>Accessories</p>
+							<p>Bags</p>
+							<p>Denim</p>
+							<p>Hoodies & Sweatshirts</p>
+							<p>Jackets & Coats</p>
+							<p>Polos</p>
+							<p>Shirts</p>
+							<p>Shoes</p>
+							<p>Sweaters & Knits</p>
+							<p>T-Shirts</p>
+							<p>Tanks</p>
+						</details>
+
+						<details class="filter__details-second">
+							<summary class="filter__summary-second">BRAND</summary>
+						</details>
+
+						<details class="filter__details-second">
+							<summary class="filter__summary-second">DESIGNER</summary>
+						</details>
+
+					</details>
+
 					<div class="sort">
 						<p>TRENDING NOW <img src="img/tray.svg" alt=""></p>
-						<p>Size <img src="img/tray.svg" alt=""></p>
+						<details>
+							<summary class="sort__summary">Size <img src="img/tray.svg" alt=""></summary>
+							<form class="sort__form" action="#" method="post">
+
+								<input type="radio" id="xs" name="size" value="xs">
+								<label class="sort__form-input" for="xs">XS</label> <br>
+
+								<input type="radio" id="s" name="size" value="s">
+								<label class="sort__form-input" for="s">S</label> <br>
+
+								<input type="radio" id="m" name="size" value="m">
+								<label class="sort__form-input" for="m">M</label> <br>
+
+								<input type="radio" id="l" name="size" value="l">
+								<label class="sort__form-input" for="l">L</label> <br>
+
+							</form>
+						</details>
 						<p>Price <img src="img/tray.svg" alt=""></p>
 					</div>
 				</div>
@@ -159,7 +265,7 @@
 			</div>
 		</section>
 
-		<!-- !Заменить класс после объяснения, мб засунуть его в блок-->
+		<!-- todo Заменить класс после объяснения, мб засунуть его в блок-->
 		<div class="prokrytka"></div>
 
 		<section class="advantage">
@@ -188,19 +294,19 @@
 		<section class="contact">
 			<div class="container">
 				<div class="contact__wrap">
-					<div class="face">
+					<div class="contact__face">
 						<img class="contact__face-img" src="img/face.png" alt="">
 						<h3 class="contact__heading-face">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
 							purus
 							condimentum“</h3>
 					</div>
 					<div class="subscribe">
-						<h3 class="contact__heading-sub"> <span class="subsribe__decor"> SUBSCRIBE </span> <br> FOR OUR
+						<h3 class="contact__heading-sub"> <span class="subscribe__decor"> SUBSCRIBE </span> <br> FOR OUR
 							NEWLETTER
 							AND
 							PROMOTION</h3>
-						<form class="form" action="POST">
-							<div class="test-1">
+						<form class="form" action="#" method="POST">
+							<div class="form__flex">
 								<input placeholder="Enter Your Email" class="input" type="email">
 								<button type="submit" class="submit">Subscribe</button>
 							</div>
@@ -217,10 +323,10 @@
 			<div class="footer__wrap">
 				<p class="footer__text">&copy; 2021 Brand All Rights Reserved.</p>
 				<div class="link">
-					<i class="fab fa-facebook-f test"></i>
-					<i class="fab fa-instagram test"></i>
-					<i class="fab fa-pinterest-p test"></i>
-					<i class="fab fa-twitter-square test"></i>
+					<i class="fab fa-facebook-f navigation"></i>
+					<i class="fab fa-instagram navigation"></i>
+					<i class="fab fa-pinterest-p navigation"></i>
+					<i class="fab fa-twitter-square navigation"></i>
 				</div>
 			</div>
 		</div>
